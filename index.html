@@ -54,28 +54,104 @@
     </section>
 
     <section class="categories-section">
-      <h2>Janubiy Koreya Provinsiyalari</h2>
-      <p>Janubiy Koreyaning mashhur provinsiyalari</p>
+      <h2>Janubiy Koreya Provinsiyalarida Ish O‘rinlari</h2>
+      <p>O‘zingizga mos ish o‘rinlarini qidirib toping va har bir provinsiyadagi imkoniyatlarni o‘rganing!</p>
+
+
       <div class="categories-grid">
-        <div class="category-card purple" onclick="searchByCard('Seul')">Seul</div>
-        <div class="category-card orange" onclick="searchByCard('Busan')">Busan</div>
-        <div class="category-card blue" onclick="searchByCard('Incheon')">Incheon</div>
-        <div class="category-card green" onclick="searchByCard('Daegu')">Daegu</div>
-        <div class="category-card yellow" onclick="searchByCard('Daejeon')">Daejeon</div>
-        <div class="category-card pink" onclick="searchByCard('Gwangju')">Gwangju</div>
-        <div class="category-card teal" onclick="searchByCard('Ulsan')">Ulsan</div>
-        <div class="category-card lime" onclick="searchByCard('Suwon')">Suwon (Gyeonggi)</div>
-        <div class="category-card violet" onclick="searchByCard('Jeju-do')">Jeju-do</div>
-        <div class="category-card brown" onclick="searchByCard('Gangwon-do')">Gangwon-do</div>
-        <div class="category-card red" onclick="searchByCard('Gyeongsangbuk-do')">Gyeongsangbuk-do</div>
-        <div class="category-card blue" onclick="searchByCard('Gyeongsangnam-do')">Gyeongsangnam-do</div>
-        <div class="category-card purple" onclick="searchByCard('Jeollabuk-do')">Jeollabuk-do</div>
-        <div class="category-card orange" onclick="searchByCard('Jeollanam-do')">Jeollanam-do</div>
-        <div class="category-card green" onclick="searchByCard('Chungcheongbuk-do')">Chungcheongbuk-do</div>
-        <div class="category-card yellow" onclick="searchByCard('Chungcheongnam-do')">Chungcheongnam-do</div>
+        <div class="category-card purple" onclick="searchByCard('Seul')" data-province="Seul">
+          <span class="province-name">Seul</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card orange" onclick="searchByCard('Busan')" data-province="Busan">
+          <span class="province-name">Busan</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card blue" onclick="searchByCard('Incheon')" data-province="Incheon">
+          <span class="province-name">Incheon</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card green" onclick="searchByCard('Daegu')" data-province="Daegu">
+          <span class="province-name">Daegu</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card yellow" onclick="searchByCard('Daejeon')" data-province="Daejeon">
+          <span class="province-name">Daejeon</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card pink" onclick="searchByCard('Gwangju')" data-province="Gwangju">
+          <span class="province-name">Gwangju</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card teal" onclick="searchByCard('Ulsan')" data-province="Ulsan">
+          <span class="province-name">Ulsan</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card lime" onclick="searchByCard('Suwon')" data-province="Suwon">
+          <span class="province-name">Suwon</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card violet" onclick="searchByCard('Jeju-do')" data-province="Jeju-do">
+          <span class="province-name">Jeju-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card brown" onclick="searchByCard('Gangwon-do')" data-province="Gangwon-do">
+          <span class="province-name">Gangwon-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card red" onclick="searchByCard('Gyeongsangbuk-do')" data-province="Gyeongsangbuk-do">
+          <span class="province-name">Gyeongsangbuk-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card blue" onclick="searchByCard('Gyeongsangnam-do')" data-province="Gyeongsangnam-do">
+          <span class="province-name">Gyeongsangnam-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card purple" onclick="searchByCard('Jeollabuk-do')" data-province="Jeollabuk-do">
+          <span class="province-name">Jeollabuk-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card orange" onclick="searchByCard('Jeollanam-do')" data-province="Jeollanam-do">
+          <span class="province-name">Jeollanam-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card green" onclick="searchByCard('Chungcheongbuk-do')" data-province="Chungcheongbuk-do">
+          <span class="province-name">Chungcheongbuk-do</span>
+          <span class="job-count"></span>
+        </div>
+        <div class="category-card yellow" onclick="searchByCard('Chungcheongnam-do')" data-province="Chungcheongnam-do">
+          <span class="province-name">Chungcheongnam-do</span>
+          <span class="job-count"></span>
+        </div>
       </div>
     </section>
+    
+    
   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Biz haqimizda</h3>
+        <p>
+          Biz bu platformani aynan sizning qulay ish topishingiz uchun yaratdik! JobPort yordamida Janubiy Koreya bo'ylab eng yaxshi ish imkoniyatlarini kashf eting va o'zingizga mos ishni tanlang. Platformamizdan mamnun bo'lsangiz, yaqinlaringizga ham tavsiya qilishni unutmang!
+        </p>
+        
+      </div>
+      
+      <div class="footer-section contact">
+        <h3>Biz bilan bog'lanish</h3>
+        <p>Email: azatrader77gmail.com></p>
+        <p>Telefon: +821065469610</p>
+        <p>Manzil: Seul, Janubiy Koreya</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 JobPort | Barcha huquqlar himoyalangan.</p>
+      <p>Developer: Azamat Gofurov</p>
+    </div>
+  </footer>
+  
 
   <script src="script.js"></script>
 </body>

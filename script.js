@@ -42,4 +42,33 @@ function searchByProvince() {
   function searchByCard(province) {
     window.location.href = `result.html?province=${encodeURIComponent(province)}`;
   }
-  
+
+  // Provinsiyalar va ularga tegishli ish o'rinlari soni
+    // Provinsiyalar va ularga tegishli ish o'rinlari soni
+    const jobData = {
+      "Seul": 12,
+      "Busan": 8,
+      "Incheon": 5,
+      "Daegu": 10,
+      "Daejeon": 7,
+      "Gwangju": 3,
+      "Ulsan": 4,
+      "Suwon": 6,
+      // Qo'shimcha provinsiyalarni kiritishingiz mumkin
+    };
+
+    // Ish o'rinlari sonini kartalarda ko'rsatish funksiyasi
+    function displayJobCounts() {
+      const cards = document.querySelectorAll('.category-card');
+
+      cards.forEach(card => {
+        const province = card.getAttribute('data-province');
+        const jobCount = jobData[province] || 0; // Ish o'rinlari soni yoki 0
+
+        // Matnni dinamik tarzda o'zgartirish
+        card.querySelector('.job-count').textContent = `(${jobCount} ish o'rni)`;
+      });
+    }
+
+    // Sahifa yuklanganda ish o'rinlarini ko'rsatish
+    document.addEventListener('DOMContentLoaded', displayJobCounts);

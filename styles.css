@@ -193,50 +193,58 @@ header {
 
 /* Categories Section */
 .categories-section {
-  padding: 4rem 2rem;
   text-align: center;
+  padding: 2rem;
 }
 
 .categories-section h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #0066ff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #333;
 }
 
 .categories-section p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #555;
+  color: #666;
 }
 
 .categories-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1rem;
-  justify-content: center;
+  margin-top: 1rem;
 }
 
 .category-card {
-    padding: 1.5rem;
-    width: 150px;
-    color: #fff;
-    border-radius: 10px;
-    font-weight: bold;
-    text-align: center;
-    overflow: hidden; /* Matn tashqariga chiqmasligi uchun */
-    white-space: nowrap; /* Matnni bir qatorga cheklash uchun */
-    text-overflow: ellipsis; /* Uzoq matnlar uchun uch nuqta qo'shish */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.province-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif; /* Asosiy shrift */
+}
+
+.job-count {
+  font-size: 1rem;
+  font-family: 'Courier New', monospace; /* Ish o'rinlari soni uchun boshqa shrift */
+  margin-top: 0.3rem;
+  color: #e0e0e0;
+}
+
+/* Rangi provinsiyaga qarab o'zgartiriladi */
 .purple { background-color: #6a1b9a; }
 .orange { background-color: #ff8f00; }
 .blue { background-color: #1e88e5; }
@@ -249,6 +257,15 @@ header {
 .brown { background-color: #795548; }
 .red { background-color: #e53935; }
 
+/* Media queries */
+@media (max-width: 768px) {
+  .province-name {
+    font-size: 1rem;
+  }
+  .job-count {
+    font-size: 0.9rem;
+  }
+}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -325,5 +342,106 @@ form {
   
   button:hover {
     background-color: #004cbf;
+  }
+  
+
+  .footer {
+    background-color: #1e1e2d;
+    color: #fff;
+    padding: 3rem 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.4rem;
+    color: #ff8f00;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff8f00;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #b3b3b3;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.7rem;
+  }
+  
+  .footer-section ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff8f00;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #444;
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 2rem;
+  }
+  
+  .footer-bottom p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-bottom p span {
+    color: #ff8f00;
+    font-weight: bold;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      margin-bottom: 1.5rem;
+    }
+  
+    .footer-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .footer-section p,
+    .footer-section ul {
+      font-size: 0.9rem;
+    }
+  
+    .footer-bottom {
+      font-size: 0.8rem;
+    }
   }
   
