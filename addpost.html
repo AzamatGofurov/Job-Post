@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ish E'loni Qo'shish</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">JobPort</div>
+      <div class="burger-menu" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Bosh Sahifa</a></li>
+        <li><a href="jobs.html">Ish O'rinlari</a></li>
+        <li><a href="contact.html">Biz bilan Bog'laning</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Ish E'loni Qo'shish</h1>
+    <form id="addJobForm">
+      <label for="title">Ish nomi:</label>
+      <input type="text" id="title" placeholder="Ish nomini kiriting" required>
+
+      <label for="province">Provinsiya:</label>
+      <select id="province" required>
+        <option value="">Provinsiya tanlang</option>
+        <option value="Seul">Seul</option>
+        <option value="Busan">Busan</option>
+        <option value="Incheon">Incheon</option>
+        <option value="Daegu">Daegu</option>
+        <option value="Daejeon">Daejeon</option>
+        <option value="Gwangju">Gwangju</option>
+        <option value="Ulsan">Ulsan</option>
+        <option value="Suwon">Suwon (Gyeonggi)</option>
+        <option value="Jeju-do">Jeju-do</option>
+        <option value="Gangwon-do">Gangwon-do</option>
+        <option value="Gyeongsangbuk-do">Gyeongsangbuk-do</option>
+        <option value="Gyeongsangnam-do">Gyeongsangnam-do</option>
+        <option value="Jeollabuk-do">Jeollabuk-do</option>
+        <option value="Jeollanam-do">Jeollanam-do</option>
+        <option value="Chungcheongbuk-do">Chungcheongbuk-do</option>
+        <option value="Chungcheongnam-do">Chungcheongnam-do</option>
+      </select>
+
+      <label for="category">Kategoriya:</label>
+      <select id="category" required>
+        <option value="">Kategoriya tanlang</option>
+        <option value="Dizayn">Dizayn</option>
+        <option value="IT">IT va Dasturlash</option>
+        <option value="Tibbiyot">Tibbiyot</option>
+        <option value="Moliyaviy xizmatlar">Moliyaviy xizmatlar</option>
+        <option value="Savdo">Savdo</option>
+        <!-- Boshqa kategoriyalar qo'shishingiz mumkin -->
+      </select>
+
+      <label for="description">Ish ta'rifi:</label>
+      <textarea id="description" placeholder="Ish ta'rifini kiriting" required></textarea>
+
+      <button type="button" onclick="submitJob()">E'lonni qo'shish</button>
+    </form>
+  </main>
+
+  <script src="addpost.js"></script>
+</body>
+</html>

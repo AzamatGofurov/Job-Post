@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ish E'lonlari</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">JobPort</div>
+      <div class="burger-menu" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Bosh Sahifa</a></li>
+        <li><a href="jobs.html">Ish O'rinlari</a></li>
+        <li><a href="contact.html">Biz bilan Bog'laning</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="post-job-btn" onclick="location.href='addpost.html'">+ Ish E'loni Qo'shish</button>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <h1>Orzuingizdagi Kasbni Toping</h1>
+      <p>Ish qidirish jarayoningiz aynan shu yerda boshlanadi va tugaydi</p>
+      <div class="search-bar">
+        <input type="text" id="keyword" placeholder="Kalit so'zlar">
+        <select id="province-select">
+          <option value="">Barcha Hududlar</option>
+          <option value="Seul">Seul</option>
+          <option value="Busan">Busan</option>
+          <option value="Incheon">Incheon</option>
+          <option value="Daegu">Daegu</option>
+          <option value="Daejeon">Daejeon</option>
+          <option value="Gwangju">Gwangju</option>
+          <option value="Ulsan">Ulsan</option>
+          <option value="Suwon">Suwon (Gyeonggi)</option>
+          <option value="Jeju-do">Jeju-do</option>
+          <option value="Gangwon-do">Gangwon-do</option>
+          <option value="Gyeongsangbuk-do">Gyeongsangbuk-do</option>
+          <option value="Gyeongsangnam-do">Gyeongsangnam-do</option>
+          <option value="Jeollabuk-do">Jeollabuk-do</option>
+          <option value="Jeollanam-do">Jeollanam-do</option>
+          <option value="Chungcheongbuk-do">Chungcheongbuk-do</option>
+          <option value="Chungcheongnam-do">Chungcheongnam-do</option>
+        </select>
+        <button class="search-btn" onclick="searchByProvince()">Qidiruv</button>
+      </div>
+      <p class="search-tags">Teglar bo‘yicha qidiruv: Dizayn</p>
+    </section>
+
+    <section class="categories-section">
+      <h2>Janubiy Koreya Provinsiyalari</h2>
+      <p>Janubiy Koreyaning mashhur provinsiyalari</p>
+      <div class="categories-grid">
+        <div class="category-card purple" onclick="searchByCard('Seul')">Seul</div>
+        <div class="category-card orange" onclick="searchByCard('Busan')">Busan</div>
+        <div class="category-card blue" onclick="searchByCard('Incheon')">Incheon</div>
+        <div class="category-card green" onclick="searchByCard('Daegu')">Daegu</div>
+        <div class="category-card yellow" onclick="searchByCard('Daejeon')">Daejeon</div>
+        <div class="category-card pink" onclick="searchByCard('Gwangju')">Gwangju</div>
+        <div class="category-card teal" onclick="searchByCard('Ulsan')">Ulsan</div>
+        <div class="category-card lime" onclick="searchByCard('Suwon')">Suwon (Gyeonggi)</div>
+        <div class="category-card violet" onclick="searchByCard('Jeju-do')">Jeju-do</div>
+        <div class="category-card brown" onclick="searchByCard('Gangwon-do')">Gangwon-do</div>
+        <div class="category-card red" onclick="searchByCard('Gyeongsangbuk-do')">Gyeongsangbuk-do</div>
+        <div class="category-card blue" onclick="searchByCard('Gyeongsangnam-do')">Gyeongsangnam-do</div>
+        <div class="category-card purple" onclick="searchByCard('Jeollabuk-do')">Jeollabuk-do</div>
+        <div class="category-card orange" onclick="searchByCard('Jeollanam-do')">Jeollanam-do</div>
+        <div class="category-card green" onclick="searchByCard('Chungcheongbuk-do')">Chungcheongbuk-do</div>
+        <div class="category-card yellow" onclick="searchByCard('Chungcheongnam-do')">Chungcheongnam-do</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
